@@ -256,8 +256,8 @@ Calendar.prototype.modifyEventWithOptions = function (title, location, notes, st
   }])
 };
 
-Calendar.prototype.modifyEvent = function (title, location, notes, startDate, endDate, newTitle, newLocation, newNotes, newStartDate, newEndDate, successCallback, errorCallback) {
-  Calendar.prototype.modifyEventWithOptions(title, location, notes, startDate, endDate, newTitle, newLocation, newNotes, newStartDate, newEndDate, {}, successCallback, errorCallback);
+Calendar.prototype.modifyEvent = function ({title, location, notes, startDate, endDate, newTitle, newLocation, newNotes, newStartDate, newEndDate}, successCallback, errorCallback) {
+  Calendar.prototype.modifyEventWithOptions({title, location, notes, startDate, endDate, newTitle, newLocation, newNotes, newStartDate, newEndDate}, {}, successCallback, errorCallback);
 };
 
 Calendar.prototype.modifyEventInNamedCalendar = function (title, location, notes, startDate, endDate, newTitle, newLocation, newNotes, newStartDate, newEndDate, calendarName, successCallback, errorCallback) {
